@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luqman Mustafa — Portfolio</title>
+  <meta name="description" content="Portfolio of Luqman Mustafa — Java developer, web developer, and software enthusiast.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #98a0b3;
+      --accent: #7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      --radius: 14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:linear-gradient(180deg,#061028 0%,#071025 50%,#041018 100%);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+
+    /* Layout */
+    .container{max-width:1100px;margin:36px auto;padding:0 20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;box-shadow:0 6px 20px rgba(15,20,40,0.6)}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{padding:8px 12px;border-radius:10px;color:var(--muted);font-weight:600}
+    nav a:hover{background:var(--glass);color: #fff}
+    .cta{background:linear-gradient(90deg,var(--accent),#06b6d4);padding:8px 14px;border-radius:12px;color:#fff;font-weight:700}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px;align-items:center}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:28px;border-radius:var(--radius);box-shadow:inset 0 1px 0 rgba(255,255,255,0.02),0 10px 30px rgba(2,6,23,0.6)}
+    h1{margin:0;font-size:34px;line-height:1.02}
+    p.lead{color:var(--muted);margin-top:12px}
+    .actions{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:10px 14px;border-radius:10px;font-weight:700}
+    .btn-outline{border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff}
+
+    /* Profile card */
+    .profile{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:16px}
+    .avatar{width:100%;border-radius:12px;display:block;overflow:hidden}
+    .avatar svg{width:100%;height:auto;display:block}
+    .profile h3{margin:12px 0 2px}
+    .meta{color:var(--muted);font-size:14px}
+
+    /* Sections */
+    section{margin-top:32px}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 20px rgba(2,6,23,0.6)}
+    .project-img{height:160px;border-radius:8px;overflow:hidden;background:linear-gradient(135deg,#0f1724 0%,#071f3a 100%);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:999px;font-weight:600;color:var(--muted)}
+
+    footer{margin:48px 0 120px;color:var(--muted);text-align:center}
+
+    /* Contact form */
+    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    label{display:block;margin-bottom:6px;font-weight:600}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:#061428;color:#e6eef8}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .contact-grid{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">LM</div>
+        <div>
+          <div style="font-weight:800">Luqman Mustafa</div>
+          <div class="muted" style="font-size:13px">Java · Web · Open Source</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Hire me</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <h1>Hi — I'm <span style="background:linear-gradient(90deg,var(--accent),#06b6d4);-webkit-background-clip:text;background-clip:text;color:transparent;">Luqman</span>.<br>
+          I build web apps, REST APIs and small tools that make people productive.</h1>
+          <p class="lead">I’m a student at Technical University of Mombasa and a developer focused on Java backend &amp; full‑stack web development. I enjoy building clean, maintainable systems and learning new tech.</p>
+
+          <div class="actions">
+            <a class="btn cta" href="#contact">Work with me</a>
+            <a class="btn btn-outline" href="#projects">See projects</a>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+            <div class="tag">Open to work</div>
+            <div class="tag">Available for Freelance</div>
+            <div class="tag">Location: Mombasa, Kenya</div>
+          </div>
+        </div>
+
+        <aside class="profile">
+          <!-- Outer circle for gradient border -->
+<div style="width:120px; height:120px; border-radius:50%; padding:4px; background: linear-gradient(135deg,#7c3aed,#06b6d4); display:inline-block;">
+  <!-- Inner circle containing your JPG -->
+  <div style="width:100%; height:100%; border-radius:50%; overflow:hidden; background:#0b1220;">
+    <img src="images/profile.jpg" alt="Luqman Mustafa" style="width:100%; height:100%; object-fit:cover; display:block;">
+  </div>
+</div>
+
+
+          <h3>About me</h3>
+          <div class="meta">Student • Java &amp; Web Developer • Technical University of Mombasa</div>
+
+          <div style="margin-top:12px">
+            <div style="font-weight:700">Contact</div>
+            <div class="muted" style="font-size:14px;margin-top:6px">luqmanymustafa@gmail.com<br>+254 79 440 9712</div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="btn-outline" href="documents/LuqmanMustafaCV.pdf" download="LuqmanMustafaCV.pdf">Download CV</a>
+            <a class="btn-outline" href="#contact">Contact</a>
+          </div>
+          
+        </aside>
+      </section>
+
+      <section id="about">
+        <div class="card">
+          <h2>About</h2>
+          <p class="muted">I build reliable web applications using Java (Servlets, JSP), and modern frontends. I focus on readable code, good documentation and shipping features quickly. I’m currently looking for backend or full‑stack roles and freelance gigs.</p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 style="margin-top:8px">Selected projects</h2>
+        <div class="grid-3">
+          <article class="card">
+            <div class="project-img"> 
+              <div style="text-align:center">
+                <strong>Gas Station System</strong>
+                <div class="muted" style="margin-top:8px">Inventory & Sales system for multi-shop business (Java, MySQL)</div>
+              </div>
+            </div>
+            <h3 style="margin-top:12px">Gas — Retail Management</h3>
+            <p class="muted">A web application to manage multiple shops, sales records, stock and simple invoicing. Features: user roles, reports, PDF export.</p>
+            <div style="margin-top:10px">
+              <a class="btn-outline" href="https://github.com/luqmanscult/gas">View code</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="project-img"> 
+              <div style="text-align:center">
+                <strong>Resume Web App</strong>
+                <div class="muted" style="margin-top:8px">Single page resume generator (HTML/CSS/JS)</div>
+              </div>
+            </div>
+            <h3 style="margin-top:12px">Resume Builder</h3>
+            <p class="muted">A small SPA that lets users create, preview and download resume PDFs. Built with vanilla JS.</p>
+            <div style="margin-top:10px">
+              <a class="btn-outline" href="https://github.com/luqmanscult/onlinebanking">Live demo</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="project-img">
+              <div style="text-align:center">
+                <strong>Online Banking App</strong>
+                <div class="muted" style="margin-top:8px">Java Web App with account management & transactions (Servlets, JSP, MySQL)</div>
+              </div>
+            </div>
+            <h3 style="margin-top:12px">Online Banking</h3>
+            <p class="muted">A fully functional banking web app featuring user registration, login, dashboard, fund transfers, and transaction history.</p>
+            <div style="margin-top:10px">
+              <a class="btn-outline" href="https://github.com/luqmanscult/onlinebanking">View code</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 style="margin-top:18px">Skills</h2>
+        <div class="card">
+          <div class="skills">
+            <div class="skill">Java</div>
+            <div class="skill">Servlets & JSP</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">HTML & CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Git</div>
+            <div class="skill">REST APIs</div>
+            <div class="skill">Responsive Design</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 style="margin-top:18px">Contact</h2>
+        <div class="contact-grid">
+          <form class="card" onsubmit="submitContact(event)">
+            <label for="name">Full name</label>
+            <input id="name" name="name" required placeholder="Your name">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@domain.com">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Tell me about the project..."></textarea>
+
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <button class="cta btn" type="submit">Send message</button>
+              <a class="btn-outline" href="mailto:luqmanymustafa@gmail.com">Email me</a>
+            </div>
+          </form>
+
+          <aside class="card">
+            <h3>Availability</h3>
+            <p class="muted">Open for freelance and full‑time roles. Typical response time: 24–48 hours.</p>
+            <h3 style="margin-top:12px">Quick info</h3>
+            <p class="muted">Location: Mombasa, Kenya<br>Education: Technical University of Mombasa<br>Phone: +254 79 440 9712</p>
+
+            <div style="margin-top:10px">
+              <a class="btn-outline" href="#">GitHub</a>
+              <a class="btn-outline" href="#" style="margin-left:8px">LinkedIn</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <footer>
+        <div class="muted">Made with ❤️ — © <span id="year"></span> Luqman Mustafa · Mombasa, Kenya</div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Small UX helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function submitContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){ alert('Please complete the form.'); return }
+      // For a simple demo we open the user's mail client. Replace this with API call when available.
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent(message + '\n\n— ' + name + '\n' + email);
+      window.location.href = `mailto:luqmanymustafa@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    function downloadResume(){
+      // This creates a tiny resume placeholder. Replace with your real file or adjust path.
+      const text = `Luqman Mustafa\nJava & Web Developer\nEmail: luqmanymustafa@gmail.com\nPhone: +254794409712\n`;
+      const blob = new Blob([text], {type: 'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'Luqman_Mustafa_CV.txt';
+      document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    })
+  </script>
+</body>
+</html>
